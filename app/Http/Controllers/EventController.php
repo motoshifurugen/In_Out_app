@@ -26,16 +26,16 @@ class EventController extends Controller
         return redirect()->route('events.index');
     }
 
-    public function show(Event $Event) {
+    public function show(Event $event) {
         return view('events.show', compact('event'));
     }
 
-    public function edit(Event $Event) {
+    public function edit(Event $event) {
         return view('events.edit', compact('event'));
     }
 
 
-    public function update(Request $request, Event $Event) {
+    public function update(Request $request, Event $event) {
         $event->type = request('type');
         $event->item_name = request('item_name');
         $event->price = request('price');
@@ -44,7 +44,7 @@ class EventController extends Controller
         return redirect()->route('events.index');
     }
 
-    public function destroy(Event $Event) {
+    public function destroy(Event $event) {
         $event->delete();
         return redirect()->route('events.index');
     }

@@ -18,8 +18,7 @@ class CreateEventsTable extends Migration
             $table->string('type');
             $table->string('item_name');
             $table->integer('price');
-            $table->string('memo');
-            $table->timestamps();
+            $table->string('memo')->nullable();
         });
     }
 
