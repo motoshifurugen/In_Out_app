@@ -18,4 +18,6 @@ Route::get('/', function () {
 
 });
 
+Route::resource('items', 'ItemController');
+
 Route::resource('events', 'EventController');

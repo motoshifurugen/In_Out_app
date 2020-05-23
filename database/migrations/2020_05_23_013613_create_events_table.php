@@ -17,6 +17,7 @@ class CreateEventsTable extends Migration
             $table->bigIncrements('id');
             // $table->date('event_date')->nullable();
             $table->string('type');
+            $table->integer('item_id')->unsigned();
             $table->string('item_name');
             $table->integer('price');
             $table->string('memo')->nullable();
