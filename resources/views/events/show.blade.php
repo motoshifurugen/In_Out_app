@@ -1,3 +1,4 @@
+<!-- <div>{{ $event->event_date }}</div> -->
 <div>{{ $event->type }}</div>
 <div>{{ $event->item_name }}</div>
 <div>{{ $event->price }}</div>

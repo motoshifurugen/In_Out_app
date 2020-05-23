@@ -15,10 +15,15 @@ class CreateEventsTable extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->bigIncrements('id');
+            // $table->date('event_date')->nullable();
             $table->string('type');
             $table->string('item_name');
             $table->integer('price');
             $table->string('memo')->nullable();
+            // $table->timestamps()->nullable();
+            // $table->date('updated_at');
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 

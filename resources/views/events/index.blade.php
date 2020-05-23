@@ -2,6 +2,7 @@
     @foreach($events as $event)
 
     <tr>
+      <!-- <td>{{ $event->event_date }}</td> -->
       <td>{{ $event->type }}</td>
       <td>{{ $event->item_name }}</td>
       <td>{{ $event->price }}</td>

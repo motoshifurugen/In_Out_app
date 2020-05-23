@@ -18,6 +18,7 @@ class EventController extends Controller
 
     public function store(Request $request) {
         $event = new Event();
+        // $event->event_date = request('event_date');
         $event->type = request('type');
         $event->item_name = request('item_name');
         $event->price = request('price');
