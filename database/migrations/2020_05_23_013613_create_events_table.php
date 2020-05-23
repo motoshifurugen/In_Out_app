@@ -20,10 +20,10 @@ class CreateEventsTable extends Migration
             $table->string('item_name');
             $table->integer('price');
             $table->string('memo')->nullable();
-            // $table->timestamps()->nullable();
+            // $table->timestamps();
             // $table->date('updated_at');
-            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
-            $table->timestamp('created_at')->useCurrent();
+            // $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+            // $table->timestamp('created_at')->useCurrent();
         });
     }
 
