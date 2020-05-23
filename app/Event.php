@@ -11,7 +11,7 @@ class Event extends Model
 
     public function item()
     {
-        return $this->belongTo('App\Item');
+        return $this->belongsTo('App\Item');
     }
     // const UPDATED_AT = 'updated_at';
 }

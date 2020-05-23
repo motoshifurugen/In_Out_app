@@ -15,6 +15,7 @@ class EventController extends Controller
 
     public function create() {
         $items = Item::all();
+
         return view('events.create', compact('items'));
     }
 
@@ -23,7 +24,7 @@ class EventController extends Controller
         // $event->event_date = request('event_date');
         $event->type = request('type');
         // $event->item_name = request('item_name');
-        $event->item_id = $request->input('item_id');
+        $event->item_id = request('item_id');
         $event->price = request('price');
         $event->memo = request('memo');
         $event->save();
@@ -44,10 +45,11 @@ class EventController extends Controller
     public function update(Request $request, Event $event) {
         $event->type = request('type');
         // $event->item_name = request('item_name');
-        $event->item_id = $request->input('item_id');
+        $event->item_id = request('item_id');
         $event->price = request('price');
         $event->memo = request('memo');
         $event->save();
+
         return redirect()->route('events.index');
     }
 
