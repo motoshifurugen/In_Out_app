@@ -15,7 +15,13 @@
     </tr>
     <tr>
         <td><input type="text" name="type"></td>
-        <td><input type="text" name="item_name"></td>
+        <td>
+            <select name="item_id">
+                @foreach($items as $item)
+                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                @endforeach
+            </select>
+        </td>
         <td><input type="number" name="price"></td>
         <td><input type="text" name="memo"></td>
     </tr>

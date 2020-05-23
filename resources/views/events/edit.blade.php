@@ -15,7 +15,14 @@
         </tr>
         <tr>
             <td><input type="text" name="type" value="{{ old('type') == '' ? $event->type : old('type') }}"></td>
-            <td> <input type="text" name="item_name" value="{{ old('item_name') == '' ? $event->item_name : old('item_name') }}"></td>
+            <td><select name="item_id">
+                @foreach ($items as $item)
+                    @if ($item->id == $event->item_id)
+                        <option value="{{ $item->id }}" selected>{{ $item->name }}</option>
+                    @else
+                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                    @endif
+                @endforeach
             <td><input type="number" name="price" value="{{ old('price') == '' ? $event->price : old('price') }}"></td>
             <td><input type="text" name="memo" value="{{ old('memo') == '' ? $event->memo : old('memo') }}"></td>
         </tr>

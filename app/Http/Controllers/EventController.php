@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Event;
+use App\Item;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -13,14 +14,16 @@ class EventController extends Controller
     }
 
     public function create() {
-        return view('events.create');
+        $items = Item::all();
+        return view('events.create', compact('items'));
     }
 
     public function store(Request $request) {
         $event = new Event();
         // $event->event_date = request('event_date');
         $event->type = request('type');
-        $event->item_name = request('item_name');
+        // $event->item_name = request('item_name');
+        $event->item_id = $request->input('item_id');
         $event->price = request('price');
         $event->memo = request('memo');
         $event->save();
@@ -32,13 +35,16 @@ class EventController extends Controller
     }
 
     public function edit(Event $event) {
-        return view('events.edit', compact('event'));
+        $items = Item::all();
+
+        return view('events.edit', compact('event', 'items'));
     }
 
 
     public function update(Request $request, Event $event) {
         $event->type = request('type');
-        $event->item_name = request('item_name');
+        // $event->item_name = request('item_name');
+        $event->item_id = $request->input('item_id');
         $event->price = request('price');
         $event->memo = request('memo');
         $event->save();
