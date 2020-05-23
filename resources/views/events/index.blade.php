@@ -1,4 +1,9 @@
 <table border="1">
+    <tr>
+        <th>In or Out</th>
+        <th>項目名</th>
+        <th>金額</th>
+    </tr>
     @foreach($events as $event)
 
     <tr>
