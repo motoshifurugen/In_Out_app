@@ -18,7 +18,10 @@ class EventController extends Controller
 
     public function store(Request $request) {
         $event = new Event();
-        $event->name = request('name');
+        $event->type = request('type');
+        $event->item_name = request('item_name');
+        $event->price = request('price');
+        $event->memo = request('memo');
         $event->save();
         return redirect()->route('events.index');
     }
@@ -33,7 +36,10 @@ class EventController extends Controller
 
 
     public function update(Request $request, Event $Event) {
-        $event->name = request('name');
+        $event->type = request('type');
+        $event->item_name = request('item_name');
+        $event->price = request('price');
+        $event->memo = request('memo');
         $event->save();
         return redirect()->route('events.index');
     }
