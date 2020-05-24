@@ -21,15 +21,18 @@ class EventController extends Controller
     }
 
     public function store(Request $request) {
+        var_dump('created_at', request('created_at'));
+        var_dump('updated_at', request('updated_at'));
+
         $event = new Event();
-        // $event->event_date = request('event_date');
         $event->type = request('type');
         // $event->item_name = request('item_name');
         $event->item_id = request('item_id');
         $event->price = request('price');
         $event->memo = request('memo');
+        $event->created_at = request('created_at');
         $event->save();
-        return redirect()->route('events.index');
+        // return redirect()->route('events.index');
         // var_dump('type', request('type'), '<br>');
         // var_dump('item_id', request('item_id'), '<br>');
         // var_dump('price', request('price'), '<br>');

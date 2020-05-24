@@ -7,7 +7,7 @@
     @foreach($events as $event)
 
     <tr>
-      <!-- <td>{{ $event->event_date }}</td> -->
+      {{-- <td>{{ $event->event_date }}</td> --}}
       <td>{{ $event->type }}</td>
       <td><select disabled name="item_id">
         @foreach ($items as $item)
