@@ -18,7 +18,7 @@ class CreateEventsTable extends Migration
             // $table->date('event_date')->nullable();
             $table->string('type');
             $table->integer('item_id')->unsigned();
-            $table->string('item_name');
+            // $table->string('item_name');
             $table->integer('price')->unsigned();
             $table->string('memo')->nullable();
             // $table->timestamps();

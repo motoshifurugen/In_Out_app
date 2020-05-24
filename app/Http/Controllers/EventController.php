@@ -10,7 +10,8 @@ class EventController extends Controller
 {
     public function index() {
         $events = Event::all();
-        return view('events.index', compact('events'));
+        $items = Item::all();
+        return view('events.index', compact('events', 'items'));
     }
 
     public function create() {
@@ -29,6 +30,15 @@ class EventController extends Controller
         $event->memo = request('memo');
         $event->save();
         return redirect()->route('events.index');
+        // var_dump('type', request('type'), '<br>');
+        // var_dump('item_id', request('item_id'), '<br>');
+        // var_dump('price', request('price'), '<br>');
+        // var_dump('memo', request('memo'), '<br>');
+        // $event->type = 'test';
+        // $event->item_id = 1;
+        // $event->price = 1;
+        // $event->memo = 'test';
+        // $event->save();
     }
 
     public function show(Event $event) {

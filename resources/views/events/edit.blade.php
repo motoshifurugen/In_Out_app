@@ -23,6 +23,7 @@
                         <option value="{{ $item->id }}">{{ $item->name }}</option>
                     @endif
                 @endforeach
+            </td>
             <td><input type="number" name="price" value="{{ old('price') == '' ? $event->price : old('price') }}"></td>
             <td><input type="text" name="memo" value="{{ old('memo') == '' ? $event->memo : old('memo') }}"></td>
         </tr>

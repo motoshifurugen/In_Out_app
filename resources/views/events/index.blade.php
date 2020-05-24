@@ -9,7 +9,14 @@
     <tr>
       <!-- <td>{{ $event->event_date }}</td> -->
       <td>{{ $event->type }}</td>
-      <td>{{ $event->item_name }}</td>
+      <td><select disabled name="item_id">
+        @foreach ($items as $item)
+            @if ($item->id == $event->item_id)
+                <option value="{{ $item->id }}" selected>{{ $item->name }}</option>
+            @else
+                <option value="{{ $item->id }}">{{ $item->name }}</option>
+            @endif
+        @endforeach</td>
       <td>{{ $event->price }}</td>
       <td><a href="/events/{{ $event->id }}">見る</a></td>
       <td><a href="/events/{{ $event->id }}/edit">編集する</a></td>
