@@ -32,7 +32,7 @@ class EventController extends Controller
         $event->memo = request('memo');
         $event->created_at = request('created_at');
         $event->save();
-        // return redirect()->route('events.index');
+        return redirect()->route('events.index');
         // var_dump('type', request('type'), '<br>');
         // var_dump('item_id', request('item_id'), '<br>');
         // var_dump('price', request('price'), '<br>');

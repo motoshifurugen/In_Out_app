@@ -7,7 +7,7 @@ use SoftDeletingTrait;
 
 class Event extends Model
 {
-    // public $timestamps = false;
+    public $timestamps = false;
 
     public function item()
     {
