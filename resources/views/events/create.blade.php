@@ -1,3 +1,9 @@
+@extends('layouts.layouts')
+
+@section('title', 'In Out app')
+
+@section('content')
+
 <form method="POST" action="/events">
     {{ csrf_field() }}
     <!-- <input type="number" name="event_date"> -->
@@ -31,3 +37,5 @@
   </form>
 
   <a href="/events">ホームに戻る</a>
+
+  @endsection

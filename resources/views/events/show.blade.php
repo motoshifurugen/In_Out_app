@@ -1,4 +1,9 @@
-<!-- <div>{{ $event->event_date }}</div> -->
+@extends('layouts.layouts')
+
+@section('title', 'In Out app')
+
+@section('content')
+{{-- <div>{{ $event->event_date }}</div> -}}
 {{-- <div>{{ $event->type }}</div>
 <div>{{ $event->item_name }}</div>
 <div>{{ $event->price }}</div>
@@ -20,3 +25,5 @@
 </table>
 
 <a href="/events">ホームに戻る</a>
+
+@endsection

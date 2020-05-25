@@ -1,3 +1,9 @@
+@extends('layouts.layouts')
+
+@section('title', 'In Out app')
+
+@section('content')
+
 <form method="POST" action="/events/{{ $event->id }}">
     {{ csrf_field() }}
     <input type="hidden" name="_method" value="PUT">
@@ -33,3 +39,5 @@
   </form>
 
   <a href="/events">ホームに戻る</a>
+
+  @endsection

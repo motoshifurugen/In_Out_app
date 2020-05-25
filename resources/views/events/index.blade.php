@@ -1,3 +1,9 @@
+@extends('layouts.layouts')
+
+@section('title', 'In Out app')
+
+@section('content')
+
 <table border="1">
     <tr>
         <th>In or Out</th>
@@ -32,3 +38,5 @@
     @endforeach
     </table>
     <a href="/events/create">新しく追加する</a>
+
+@endsection
