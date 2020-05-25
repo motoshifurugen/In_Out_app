@@ -20,4 +20,6 @@ Route::get('/', function () {
 
 Route::resource('items', 'ItemController');
 
+Route::get('/', 'EventController@index');
+
 Route::resource('events', 'EventController');
