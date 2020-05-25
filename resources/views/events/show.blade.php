@@ -9,7 +9,7 @@
 <div>{{ $event->price }}</div>
 <div>{{ $event->memo }}</div> --}}
 
-<table border="1">
+<table class="table">
     <tr>
         <th>In or Out</th>
         <th>項目名</th>

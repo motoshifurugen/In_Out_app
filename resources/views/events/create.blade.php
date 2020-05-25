@@ -12,7 +12,7 @@
     <input type="number" name="price">
     <input type="text" name="memo"> --}}
 
-<table border="1">
+<table class="table">
     <tr>
         <th>In or Out</th>
         <th>項目名</th>
@@ -28,7 +28,7 @@
                 @endforeach
             </select>
         </td>
-        <td><input type="number" name="price"></td>
+        <td><div>¥<input type="number" name="price"></div></td>
         <td><input type="text" name="memo"></td>
     </tr>
 </table>

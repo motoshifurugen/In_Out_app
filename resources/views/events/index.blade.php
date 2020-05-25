@@ -4,7 +4,7 @@
 
 @section('content')
 
-<table border="1">
+<table class="table">
     <tr>
         <th>In or Out</th>
         <th>項目名</th>
@@ -23,11 +23,11 @@
                 <option value="{{ $item->id }}">{{ $item->name }}</option>
             @endif
         @endforeach</td>
-      <td>{{ $event->price }}</td>
+      <td>¥  {{ $event->price }}</td>
       <td><div class="d-flex"><a href="/events/{{ $event->id }}" class="btn btn-outline-primary">見る</a></div></td>
       <td><div class="d-flex"><a href="/events/{{ $event->id }}/edit" class="btn btn-outline-primary">編集する</a></div></td>
       <td>
-        <div class="d-flex" style="margin: 15px 0 0 0;">
+        <div class="d-flex">
         <form action="/events/{{ $event->id }}" method="POST">
           <input type="hidden" name="_method" value="DELETE">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">

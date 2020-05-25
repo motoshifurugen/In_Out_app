@@ -1,3 +1,9 @@
+@extends('layouts.layouts2')
+
+@section('title', 'Item')
+
+@section('content')
+
 <form method="POST" action="/items">
     {{ csrf_field() }}
     <!-- <input type="number" name="item_date"> -->
@@ -6,7 +12,7 @@
     <input type="number" name="price">
     <input type="text" name="memo"> --}}
 
-<table border="1">
+<table class="table">
     <tr>
         <th>項目名</th>
     </tr>
@@ -15,7 +21,9 @@
     </tr>
 </table>
 
-    <button type="submit" >保存する</button>
+    <button type="submit" class="btn btn-outline-primary" >保存する</button>
   </form>
 
-  <a href="/items">ホームに戻る</a>
+  <a href="/items">項目一覧に戻る</a>
+
+  @endsection

@@ -1,4 +1,10 @@
-<table border="1">
+@extends('layouts.layouts2')
+
+@section('title', 'Item')
+
+@section('content')
+
+<table class="table">
     <tr>
         <th>項目名</th>
     </tr>
@@ -7,4 +13,6 @@
     </tr>
 </table>
 
-<a href="/items">ホームに戻る</a>
+<a href="/items">項目一覧に戻る</a>
+
+@endsection

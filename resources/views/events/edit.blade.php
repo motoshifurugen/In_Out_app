@@ -12,7 +12,7 @@
     <input type="number" name="price" value="{{ old('price') == '' ? $event->price : old('price') }}">
     <input type="text" name="memo" value="{{ old('memo') == '' ? $event->memo : old('memo') }}"> --}}
 
-    <table border="1">
+    <table class="table">
         <tr>
             <th>In or Out</th>
             <th>項目名</th>
@@ -30,7 +30,7 @@
                     @endif
                 @endforeach
             </td>
-            <td><input type="number" name="price" value="{{ old('price') == '' ? $event->price : old('price') }}"></td>
+            <td>¥<input type="number" name="price" value="{{ old('price') == '' ? $event->price : old('price') }}"></td>
             <td><input type="text" name="memo" value="{{ old('memo') == '' ? $event->memo : old('memo') }}"></td>
         </tr>
     </table>
