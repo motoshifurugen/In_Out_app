@@ -33,7 +33,7 @@
     </tr>
 </table>
 
-    <button type="submit" >保存する</button>
+    <button type="submit" class="btn btn-outline-primary" >保存する</button>
   </form>
 
   <a href="/events">ホームに戻る</a>
