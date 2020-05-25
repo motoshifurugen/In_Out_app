@@ -35,7 +35,7 @@
         </tr>
     </table>
 
-    <button type="submit">更新する</button>
+    <button type="submit" class="btn btn-outline-primary">更新する</button>
   </form>
 
   <a href="/events">ホームに戻る</a>

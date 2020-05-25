@@ -24,14 +24,16 @@
             @endif
         @endforeach</td>
       <td>{{ $event->price }}</td>
-      <td><a href="/events/{{ $event->id }}">見る</a></td>
-      <td><a href="/events/{{ $event->id }}/edit">編集する</a></td>
+      <td><div class="d-flex"><a href="/events/{{ $event->id }}" class="btn btn-outline-primary">見る</a></div></td>
+      <td><div class="d-flex"><a href="/events/{{ $event->id }}/edit" class="btn btn-outline-primary">編集する</a></div></td>
       <td>
+        <div class="d-flex" style="margin: 15px 0 0 0;">
         <form action="/events/{{ $event->id }}" method="POST">
           <input type="hidden" name="_method" value="DELETE">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
-          <button type="submit">削除する</button>
+          <button type="submit" class="btn btn-outline-danger">削除する</button>
         </form>
+        </div>
       </td>
     </tr>
 
